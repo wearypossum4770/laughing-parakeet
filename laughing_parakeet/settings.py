@@ -150,7 +150,7 @@ TEMPLATES = [
 ]
 SITE_ID = 1
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [BASE_DIR / "build.static"]
+STATICFILES_DIRS = [BASE_DIR / "static"] #[BASE_DIR / "build.static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 MEDIA_ROOT = BASE_DIR / "media"
