@@ -139,7 +139,7 @@ const WeatherContainer = ({ props: { latitude, longitude } }) => {
   let accesibleDictionary = new Map();
   console.log("🍺 🛋️");
   let { temp, feels_like, temp_min, temp_max, id } = state.weather;
-  console.log(id)
+  console.log(id);
   function convertTemperature() {}
   return !weatherObtained ? (
     <div>obtaining location....</div>
