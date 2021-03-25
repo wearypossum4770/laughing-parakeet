@@ -8,13 +8,13 @@ djoser = "*"
 whitenoise = "*"
 channels = "*"
 channels-redis = "*"
-django = "*"
+Django = "*"
 djangorestframework = "*"
 django-crispy-forms = "*"
 python-dotenv = "*"
 django-heroku = "*"
 django-cors-headers = "*"
-pillow = "*"
+Pillow = "*"
 gunicorn = "*"
 
 [dev-packages]
@@ -23,13 +23,11 @@ pytest-cov = "*"
 coverage = "*"
 pytest-django = "*"
 django-extensions = "*"
+lark = "*"
+pytest-asyncio = "*"
 
 [requires]
 python_version = "3.8"
 
 [pipenv]
 allow_prereleases = true
-
-[dev-packages.black]
-version = "*"
-pre = "true"
