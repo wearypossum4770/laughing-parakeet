@@ -1,1 +1,1 @@
-web: gunicorn laughing_parakeet.wsgi
+web: gunicorn laughing_parakeet.asgi
