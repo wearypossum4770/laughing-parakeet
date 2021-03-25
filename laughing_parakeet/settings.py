@@ -3,10 +3,11 @@ from dotenv import load_dotenv, find_dotenv
 from os import getenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DEBUG = getenv("DEBUG")
 load_dotenv(find_dotenv())
+DEBUG = getenv("DEBUG")
 SECRET_KEY = getenv("SECRET_KEY")
 ALLOWED_HOSTS = []
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 # =================================================================================
 # ADMINISTRATIVE
 # =================================================================================
@@ -26,7 +27,7 @@ THIRD_PARTY_APPS = (
     "whitenoise",
     "corsheaders",
     "rest_framework",
-    "rest_framework.authtoken
+    "rest_framework.authtoken",
     "crispy_forms",
 )
 DEVELOPMENT_APPS = ("whitenoise.runserver_nostatic",)
@@ -46,8 +47,11 @@ DJANGO_APPS = (
 INSTALLED_APPS = THIRD_PARTY_APPS + PROJECT_APPS + DJANGO_APPS
 if DEBUG:
     INSTALLED_APPS + DEVELOPMENT_APPS
-# WSGI_APPLICATION = 'laughing_parakeet.wsgi.application'
-ASGI_APPLICATION = "laughing_parakeet.asgi.application"
+
+if 'channels' in THIRD_PARTY_APPS:
+    ASGI_APPLICATION = "laughing_parakeet.asgi.application"
+else:
+    WSGI_APPLICATION = 'laughing_parakeet.wsgi.application'
 ROOT_URLCONF = "laughing_parakeet.urls"
 # =================================================================================
 # CHANNELS / CHAT / WEBSOCKETS

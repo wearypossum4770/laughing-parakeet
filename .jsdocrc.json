@@ -1,0 +1,8 @@
+{
+    "plugins": ["plugins/markdown"],
+    "recurseDepth": 10,
+    "source": { "include": ["src/"] },
+    "sourceType": "module",
+    "tags": { "allowUnknownTags": true, "dictionaries": ["jsdoc"] }
+  }
+  
