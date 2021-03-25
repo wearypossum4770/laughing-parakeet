@@ -26,8 +26,7 @@ THIRD_PARTY_APPS = (
     "whitenoise",
     "corsheaders",
     "rest_framework",
-    "rest_framework.authtoken",
-    "django_extensions",
+    "rest_framework.authtoken
     "crispy_forms",
 )
 DEVELOPMENT_APPS = ("whitenoise.runserver_nostatic",)
